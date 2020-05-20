@@ -33,7 +33,9 @@ def test_added_task_has_id_set(tasks_db):
     # the [:-1] syntax returns a list with all but the last element
     assert task_from_db[:-1] == new_task[:-1]
 
-
+"""
+pytest -v --setup-show test_add.py::test_add_increases_count
+"""
 def test_add_increases_count(db_with_3_tasks):
     """Test tasks.add() affect on tasks.count()."""
     # GIVEN a db with 3 tasks

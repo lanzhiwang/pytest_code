@@ -46,9 +46,9 @@ def test_add_b(tasks_db, b_task):
     assert equivalent(t_from_db, b_task)
 
 
-def id_func(fixture_value):
+def id_func(fixture_v):
     """A function for generating ids."""
-    t = fixture_value
+    t = fixture_v
     return 'Task({},{},{})'.format(t.summary, t.owner, t.done)
 
 
