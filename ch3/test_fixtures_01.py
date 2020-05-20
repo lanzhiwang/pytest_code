@@ -24,7 +24,7 @@ def some_other_data():
 
 def test_other_data(some_other_data):
     """Try to use failing fixture."""
-    assert some_data == 42
+    assert some_other_data == 43
 
 
 @pytest.fixture()
