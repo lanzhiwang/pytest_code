@@ -15,6 +15,9 @@ def test_add_returns_valid_id():
     assert isinstance(task_id, int)
 
 
+"""
+不同文件中的标记也可以一起测试
+"""
 @pytest.mark.smoke
 def test_added_task_has_id_set():
     """Make sure the task_id field is set by tasks.add()."""
