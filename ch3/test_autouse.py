@@ -10,7 +10,8 @@ def footer_session_scope():
     yield
     now = time.time()
     print('--')
-    print('finished : {}'.format(time.strftime('%d %b %X', time.localtime(now))))
+    print('finished : {}'.format(time.strftime('%d %b %X',
+                                               time.localtime(now))))
     print('-----------------')
 
 

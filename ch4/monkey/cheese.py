@@ -21,8 +21,10 @@ def write_default_cheese_preferences():
 
 _default_prefs = {
     'slicing': ['manchego', 'sharp cheddar'],
-    'spreadable': ['Saint Andre', 'camembert',
-                   'bucheron', 'goat', 'humbolt fog', 'cambozola'],
+    'spreadable': [
+        'Saint Andre', 'camembert', 'bucheron', 'goat', 'humbolt fog',
+        'cambozola'
+    ],
     'salads': ['crumbled feta']
 }
 

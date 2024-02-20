@@ -21,10 +21,9 @@ def tasks_db(tasks_db_session):
 @pytest.fixture()
 def tasks_just_a_few():
     """All summaries and owners are unique."""
-    return (
-        Task('Write some code', 'Brian', True),
-        Task("Code review Brian's code", 'Katie', False),
-        Task('Fix what Brian did', 'Michelle', False))
+    return (Task('Write some code', 'Brian',
+                 True), Task("Code review Brian's code", 'Katie', False),
+            Task('Fix what Brian did', 'Michelle', False))
 
 
 @pytest.fixture()

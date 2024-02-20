@@ -40,7 +40,9 @@ def sample_test(testdir):
 
 def test_with_nice(sample_test):
     result = sample_test.runpytest('--nice')
-    result.stdout.fnmatch_lines(['*.O*', ])  # . for Pass, O for Fail
+    result.stdout.fnmatch_lines([
+        '*.O*',
+    ])  # . for Pass, O for Fail
     assert result.ret == 1
 
 

@@ -23,6 +23,7 @@ def test_2():
 
 
 class TestClass:
+
     @classmethod
     def setup_class(cls):
         print(f'setup_class() for class {cls.__name__}')

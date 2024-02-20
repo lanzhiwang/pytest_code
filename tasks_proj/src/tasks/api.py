@@ -3,7 +3,6 @@
 from collections import namedtuple
 from six import string_types
 
-
 # Task element types : [summary: str, owner: str, done: bool, id: int]
 Task = namedtuple('Task', ['summary', 'owner', 'done', 'id'])
 Task.__new__.__defaults__ = (None, None, False, None)
@@ -24,8 +23,7 @@ def add(task):  # type: (Task) -> int
         raise TypeError('task must be Task object')
     if not isinstance(task.summary, string_types):
         raise ValueError('task.summary must be string')
-    if not ((task.owner is None) or
-            isinstance(task.owner, string_types)):
+    if not ((task.owner is None) or isinstance(task.owner, string_types)):
         raise ValueError('task.owner must be string or None)')
     # We test for this in ch5, so keep this commented out to let
     # the ch5 test fail.

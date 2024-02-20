@@ -106,11 +106,15 @@ class TasksDB_MongoDB():  # noqa: E801
 
     def _reset_task_id(self):
         self._db.counters.find_one_and_update({'_id': 'tasksid'},
-                                              {'$set': {'seq': 0}})
+                                              {'$set': {
+                                                  'seq': 0
+                                              }})
 
     def _get_next_task_id(self):
         ret = self._db.counters.find_one_and_update({'_id': 'tasksid'},
-                                                    {'$inc': {'seq': 1}})
+                                                    {'$inc': {
+                                                        'seq': 1
+                                                    }})
         return ret['seq']
 
     def _disconnect(self):

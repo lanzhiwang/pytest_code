@@ -8,9 +8,15 @@ import pytest
 def author_file_json(tmpdir_factory):
     """Write some authors to a data file."""
     python_author_data = {
-        'Ned': {'City': 'Boston'},
-        'Brian': {'City': 'Portland'},
-        'Luciano': {'City': 'Sau Paulo'}
+        'Ned': {
+            'City': 'Boston'
+        },
+        'Brian': {
+            'City': 'Portland'
+        },
+        'Luciano': {
+            'City': 'Sau Paulo'
+        }
     }
 
     file_ = tmpdir_factory.mktemp('data').join('author_file.json')

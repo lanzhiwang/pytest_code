@@ -40,8 +40,7 @@ def test_list_print_many_items(no_db, mocker):
         Task('modify chapter', 'Brian', False, 3),
         Task('finalize chapter', 'Katie', False, 4),
     )
-    mocker.patch.object(tasks.cli.tasks, 'list_tasks',
-                        return_value=many_tasks)
+    mocker.patch.object(tasks.cli.tasks, 'list_tasks', return_value=many_tasks)
     runner = CliRunner()
     result = runner.invoke(tasks.cli.tasks_cli, ['list'])
     expected_output = ("  ID      owner  done summary\n"
