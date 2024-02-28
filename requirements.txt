@@ -1,10 +1,12 @@
 exceptiongroup==1.2.0
+execnet==2.0.2
 importlib-metadata==7.0.1
 iniconfig==2.0.0
 packaging==23.2
 platformdirs==4.2.0
 pluggy==1.4.0
 pytest==8.0.1
+pytest-xdist==3.5.0
 tomli==2.0.1
 yapf==0.40.2
 zipp==3.17.0
